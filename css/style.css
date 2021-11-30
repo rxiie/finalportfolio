@@ -1,0 +1,268 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: black;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  
+}
+
+
+
+h1{
+  font-size: 45px;
+  line-height: 1;
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+}
+
+h2{
+  font-size: 22px;
+  line-height: 1.5;
+  color: white;
+  
+
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  display: inline;
+  padding-right: 20px;
+}
+
+nav{
+  background-color: #ddd;
+  padding: 20px 40px;    
+  text-align: left;   
+}
+
+header p{
+  color: white;
+  font-size: 20px;
+  padding: 0 30px 20px 50px;
+  text-align: left;
+}
+
+footer{
+    
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+
+nav a{
+  color: black;
+  font-weight: bold;
+  
+  text-decoration: none;
+}
+ 
+/* Requirement 2 code here*/
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: gold;
+  
+}
+  
+
+
+.current{
+  border-color: black;
+  border-style: solid;
+
+}
+
+
+
+
+.container{
+  
+  display:grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 15px;
+}
+
+
+header{
+  background-position: center; /* Parallax effect */
+  color: white;
+  height: 750px; /* Parallax effect */
+  
+  display: grid;
+  
+  grid-column: 1/ -1; 
+  grid-row: 1/ span 1;
+  
+}
+
+
+
+#main{
+    position:static;
+    color: white;
+    height: 700px;
+}
+
+#main2{
+    height: 100px;
+}
+
+
+#main3{
+    height: 700px;
+    
+}
+
+#bodytext{
+  display: block;
+    color: gray;
+    text-align: center;
+    
+}
+
+#bodytext2{
+  display: block;
+    color: gray;
+    text-align: center;
+    text-decoration: underline;
+
+
+}
+
+
+.scene{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    flex-direction: column;
+    margin: auto;
+
+  }
+ 
+    
+
+.scene > img{
+    display: block;
+    border: none;
+    margin: 10px;
+    width:400px;
+   
+    
+  }
+
+.scene > p{
+
+  font-family: sans-serif;
+  padding-left: 50px;
+  padding-right: 50px;
+
+
+}
+  
+.scene > h2{
+
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+#para{
+  padding-bottom: 50px;
+
+  
+
+}
+
+.container > h2{
+
+  display: grid;
+  justify-content: center;
+
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+
+  
+  position: absolute;
+  top: -40px;
+
+}
+
+
+@media screen and (min-width: 900px){
+  header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+  .nav{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+
+  }
+  
+  .scene{
+    display: grid;
+    grid-column-start: 1/ -1;
+    grid-column-gap: 15px;
+    grid-template-columns: 3fr 5fr;
+    margin: auto;
+    padding: 15px;
+    overflow: scroll;
+   
+  
+  }
+
+  
+.scene > p{
+  font-size: 20px;
+  width: 300px;
+
+
+
+}
+  .scene > img{
+
+    display: inline-block;
+    border: none;
+    margin: 10px;
+    width:600px;
+
+  }
+
+  .scene > iframe{
+    width: 600px;
+    height: 400px;
+
+
+
+
+  }
+
+
+}
