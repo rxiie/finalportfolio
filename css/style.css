@@ -99,6 +99,70 @@ header{
 }
 
 
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 600px;
+  position: relative;
+ 
+  border-radius: 14%;
+
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  /* position: relative; */
+  
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color:lightslategrey;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+#logo{
+  animation-name: logo;
+  animation-duration: 5s;
+
+}
+
+@keyframes logo{
+from {opacity: 0.0; width: 50px;}
+to {opacity: 1.0; width: 425px;} 
+}	
+
+
+
 
 #main{
     position:static;
@@ -215,6 +279,7 @@ header{
   padding-left: 50px;
   padding-right: 50px;
   border-style: dashed;
+  font-size: larger;
   
 
 
@@ -271,6 +336,7 @@ header{
   text-align: center;
   padding-bottom: 50px;
   border-style: dashed;
+  font-size: larger;
   
 
 
@@ -309,6 +375,11 @@ header{
    
   }
 
+  @media screen and (prefers-reduced-motion: reduce){
+		#logo{
+             animation: none;
+		}
+	  }
 
 
 .scene > img{
@@ -334,7 +405,7 @@ header{
   nav ul{
     
     float: right;
-    font-size:large;
+    font-size: 18px;
     
   }
 
@@ -342,33 +413,13 @@ header{
 
 
 @media screen and (min-width: 1000px){
-  .moreflex {
-
-  /* display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  flex-direction: column;
-  margin: auto; 
-  } */
-
-
-  }
+ 
 
   .moreflex > iframe{
     width: 730px;
     height: 520px;
   }
 
-
-  nav ul{
-    
-    float: right;
-    font-size: larger;
-    
-  }
 
   .scene > img{
 
@@ -380,8 +431,28 @@ header{
   }
   nav ul{
     
-    font-size:larger;
+    font-size: 22px;
     
+  }
+
+
+  .parallax {
+    /* The image used */
+    background-image: url("imgages_parallex.png");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .parallax {
+    background-attachment: scroll;
   }
 
 }
