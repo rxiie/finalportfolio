@@ -93,7 +93,7 @@ nav a:hover {
 header{
   background-position: center; /* Parallax effect */
   color: white;
-  height: 750px; /* Parallax effect */
+  height: auto; 
   
   
 }
@@ -184,6 +184,7 @@ header{
 }
 
    
+
     
 
 /* #cover{
@@ -202,6 +203,7 @@ header{
     max-width: 500px;
     padding-left: 50px;
     padding-right: 50px;
+    border-radius: 14%;
 
    
     
@@ -259,15 +261,17 @@ header{
     padding-left: 20px;
     padding-right: 20px;
     flex-flow: column;
+    
 }
 
 #para{
 
-  color:  cornsilk;
+  color:cornsilk;
   font-family: sans-serif;
   text-align: center;
   padding-bottom: 50px;
   border-style: dashed;
+  
 
 
 
@@ -286,14 +290,14 @@ header{
 
 
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 700px){
   
   .scene{
 
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: auto;
-    grid-column-gap: 20px;
+    grid-column-gap: 3px;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -310,7 +314,8 @@ header{
 .scene > img{
 
   margin:10px;
-  min-width: 600px;
+  max-width: 450px;
+  
   
 }
 
@@ -329,14 +334,14 @@ header{
   nav ul{
     
     float: right;
-    font-size: larger;
+    font-size:large;
     
   }
 
 }
 
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1000px){
   .moreflex {
 
   /* display: flex;
@@ -365,6 +370,18 @@ header{
     
   }
 
+  .scene > img{
 
+    
+    max-width: 600px;
+    max-height: 750px;
+    
+    
+  }
+  nav ul{
+    
+    font-size:larger;
+    
+  }
 
 }
